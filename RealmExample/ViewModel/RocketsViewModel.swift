@@ -32,8 +32,8 @@ final class RocketsViewModel {
         do {
             let realm = try Realm()
             let rockets = realm.objects(Rocket.self)
-            realmObserver = rockets.observe { _ in
-                self.rockets = Array(rockets)
+            realmObserver = rockets.observe { [weak self] _ in
+                self?.rockets = Array(rockets)
             }
         } catch {
             debugPrint(error.localizedDescription)

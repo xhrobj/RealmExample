@@ -32,8 +32,8 @@ final class ShipsViewModel {
         do {
             let realm = try Realm()
             let ships = realm.objects(Ship.self)
-            realmObserver = ships.observe { _ in
-                self.ships = Array(ships)
+            realmObserver = ships.observe { [weak self] _ in
+                self?.ships = Array(ships)
             }
         } catch {
             debugPrint(error.localizedDescription)
