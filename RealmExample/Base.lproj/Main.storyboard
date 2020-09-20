@@ -38,30 +38,30 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RocketCell" rowHeight="203" id="oDI-2C-X89" customClass="VehicleTableViewCell" customModule="RealmExample" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="203"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RocketCell" translatesAutoresizingMaskIntoConstraints="NO" id="oDI-2C-X89" customClass="VehicleTableViewCell" customModule="RealmExample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="118"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oDI-2C-X89" id="KqP-GZ-A6d">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="203"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="118"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPF-YJ-a5n">
-                                                    <rect key="frame" x="20" y="21" width="374" height="20.5"/>
+                                                    <rect key="frame" x="20" y="21" width="374" height="25.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="20.5" id="pZH-uk-SZP"/>
+                                                        <constraint firstAttribute="height" priority="750" constant="25" id="pZH-uk-SZP"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tan-zL-Q3G">
-                                                    <rect key="frame" x="20" y="51.5" width="374" height="20.5"/>
+                                                    <rect key="frame" x="20" y="56.5" width="374" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MDx-fT-gRd">
-                                                    <rect key="frame" x="20" y="82" width="374" height="110"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.north" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MDx-fT-gRd">
+                                                    <rect key="frame" x="20" y="87" width="374" height="19.5"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -70,8 +70,6 @@
                                                 <constraint firstItem="MDx-fT-gRd" firstAttribute="bottom" secondItem="KqP-GZ-A6d" secondAttribute="bottomMargin" id="Fk8-JN-juR"/>
                                                 <constraint firstItem="tan-zL-Q3G" firstAttribute="leading" secondItem="KqP-GZ-A6d" secondAttribute="leadingMargin" id="Izc-Uz-Krk"/>
                                                 <constraint firstItem="gPF-YJ-a5n" firstAttribute="leading" secondItem="KqP-GZ-A6d" secondAttribute="leadingMargin" id="JUp-xh-PHE"/>
-                                                <constraint firstItem="tan-zL-Q3G" firstAttribute="centerX" secondItem="KqP-GZ-A6d" secondAttribute="centerX" id="Pgk-Dj-KGP"/>
-                                                <constraint firstItem="MDx-fT-gRd" firstAttribute="centerX" secondItem="KqP-GZ-A6d" secondAttribute="centerX" id="ccl-pU-KXe"/>
                                                 <constraint firstItem="MDx-fT-gRd" firstAttribute="leading" secondItem="KqP-GZ-A6d" secondAttribute="leadingMargin" id="f2a-Zd-DCO"/>
                                                 <constraint firstItem="MDx-fT-gRd" firstAttribute="trailing" secondItem="KqP-GZ-A6d" secondAttribute="trailingMargin" id="orc-5m-iJM"/>
                                                 <constraint firstItem="MDx-fT-gRd" firstAttribute="top" secondItem="tan-zL-Q3G" secondAttribute="bottom" constant="10" id="pSn-Xx-AFu"/>
@@ -82,7 +80,7 @@
                                         <connections>
                                             <outlet property="descriptionLabel" destination="tan-zL-Q3G" id="Ihi-E2-M1H"/>
                                             <outlet property="nameLabel" destination="gPF-YJ-a5n" id="w8G-1k-vnx"/>
-                                            <outlet property="vehicleImageView" destination="MDx-fT-gRd" id="zuk-br-Ktw"/>
+                                            <outlet property="vehicleImageView" destination="MDx-fT-gRd" id="77x-VV-XaC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -129,30 +127,30 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShipCell" rowHeight="203" id="KxB-l4-D6R" customClass="VehicleTableViewCell" customModule="RealmExample" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="203"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShipCell" id="KxB-l4-D6R" customClass="VehicleTableViewCell" customModule="RealmExample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="118"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KxB-l4-D6R" id="NdL-0X-1dR">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="203"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="118"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXZ-w7-oJz">
-                                                    <rect key="frame" x="20" y="21" width="374" height="20.5"/>
+                                                    <rect key="frame" x="20" y="21" width="374" height="25.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="20.5" id="7db-nS-ZDw"/>
+                                                        <constraint firstAttribute="height" priority="750" constant="25" id="7db-nS-ZDw"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftP-6a-Eab">
-                                                    <rect key="frame" x="20" y="51.5" width="374" height="20.5"/>
+                                                    <rect key="frame" x="20" y="56.5" width="374" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vne-tJ-wfP">
-                                                    <rect key="frame" x="20" y="82" width="374" height="110"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="s.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vne-tJ-wfP">
+                                                    <rect key="frame" x="20" y="88" width="374" height="17.5"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -162,10 +160,8 @@
                                                 <constraint firstItem="ftP-6a-Eab" firstAttribute="top" secondItem="lXZ-w7-oJz" secondAttribute="bottom" constant="10" id="BFh-Kt-9YR"/>
                                                 <constraint firstItem="ftP-6a-Eab" firstAttribute="leading" secondItem="NdL-0X-1dR" secondAttribute="leadingMargin" id="FCJ-HM-6tc"/>
                                                 <constraint firstItem="ftP-6a-Eab" firstAttribute="trailing" secondItem="NdL-0X-1dR" secondAttribute="trailingMargin" id="QM4-gm-JyT"/>
-                                                <constraint firstItem="ftP-6a-Eab" firstAttribute="centerX" secondItem="NdL-0X-1dR" secondAttribute="centerX" id="Qdt-I6-UOA"/>
                                                 <constraint firstItem="vne-tJ-wfP" firstAttribute="trailing" secondItem="NdL-0X-1dR" secondAttribute="trailingMargin" id="TKU-gA-Vel"/>
                                                 <constraint firstItem="vne-tJ-wfP" firstAttribute="leading" secondItem="NdL-0X-1dR" secondAttribute="leadingMargin" id="Z8t-Rn-Gww"/>
-                                                <constraint firstItem="vne-tJ-wfP" firstAttribute="centerX" secondItem="NdL-0X-1dR" secondAttribute="centerX" id="fBy-Sy-Bje"/>
                                                 <constraint firstItem="vne-tJ-wfP" firstAttribute="bottom" secondItem="NdL-0X-1dR" secondAttribute="bottomMargin" id="lpg-JB-Fln"/>
                                                 <constraint firstItem="lXZ-w7-oJz" firstAttribute="leading" secondItem="NdL-0X-1dR" secondAttribute="leadingMargin" id="zpN-Ak-flv"/>
                                             </constraints>
@@ -173,7 +169,7 @@
                                         <connections>
                                             <outlet property="descriptionLabel" destination="ftP-6a-Eab" id="VRQ-uV-jWI"/>
                                             <outlet property="nameLabel" destination="lXZ-w7-oJz" id="8Tm-n0-bue"/>
-                                            <outlet property="vehicleImageView" destination="vne-tJ-wfP" id="I6B-mM-Lzi"/>
+                                            <outlet property="vehicleImageView" destination="vne-tJ-wfP" id="hAq-UM-ydW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -220,7 +216,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FeedTableViewCell" id="PWj-41-VFI" customClass="FeedTableViewCell" customModule="DataStructuresProfiling" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FeedTableViewCell" id="PWj-41-VFI" customClass="FeedTableViewCell" customModule="RealmExample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PWj-41-VFI" id="DeA-SX-Rff">
@@ -293,7 +289,7 @@
         <!--Array View Controller-->
         <scene sceneID="GAf-vE-5du">
             <objects>
-                <viewController storyboardIdentifier="ArrayViewController" id="6vd-Gb-dJd" customClass="ArrayViewController" customModule="DataStructuresProfiling" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArrayViewController" id="6vd-Gb-dJd" customClass="ArrayViewController" customModule="RealmExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lmw-J8-8PB"/>
                         <viewControllerLayoutGuide type="bottom" id="3d3-ve-joA"/>
@@ -389,7 +385,7 @@
         <!--Set View Controller-->
         <scene sceneID="nGd-JQ-mc6">
             <objects>
-                <viewController storyboardIdentifier="SetViewController" id="hvo-XF-uHa" customClass="SetViewController" customModule="DataStructuresProfiling" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SetViewController" id="hvo-XF-uHa" customClass="SetViewController" customModule="RealmExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TCa-kH-wfS"/>
                         <viewControllerLayoutGuide type="bottom" id="Z1O-5d-HSF"/>
@@ -485,7 +481,7 @@
         <!--Dictionary View Controller-->
         <scene sceneID="KhX-Lu-opc">
             <objects>
-                <viewController storyboardIdentifier="DictionaryViewController" id="Lrh-p4-ERf" customClass="DictionaryViewController" customModule="DataStructuresProfiling" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DictionaryViewController" id="Lrh-p4-ERf" customClass="DictionaryViewController" customModule="RealmExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xcL-vW-Sae"/>
                         <viewControllerLayoutGuide type="bottom" id="C2r-T6-60i"/>
@@ -580,6 +576,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="location.north" catalog="system" width="108" height="128"/>
         <image name="location.north.line" catalog="system" width="82" height="128"/>
         <image name="repeat" catalog="system" width="128" height="99"/>
         <image name="s.square" catalog="system" width="128" height="114"/>

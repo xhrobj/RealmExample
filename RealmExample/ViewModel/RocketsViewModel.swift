@@ -22,10 +22,13 @@ final class RocketsViewModel {
         let networkManager = NetworkManager()
         networkManager
             .fetchRockets(from: EndpointSpaceX.rocketsV4)
-            .sink {[weak self] rocketsJson in
+            .sink(receiveCompletion: { completion in
+                guard case .failure(let error) = completion else { return }
+                debugPrint(error)
+            }, receiveValue: { [weak self] rocketsJson in
                 self?.process(rocketsJson: rocketsJson)
-        }
-        .store(in: &cancelSet)
+            })
+            .store(in: &cancelSet)
     }
     
     private func activateRealmObserver() {

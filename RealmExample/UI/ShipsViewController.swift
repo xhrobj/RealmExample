@@ -13,7 +13,7 @@ class ShipsViewController: UIViewController {
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     var viewModel = ShipsViewModel()
-    var rocketsSubscriber: AnyCancellable?
+    var shipsSubscriber: AnyCancellable?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class ShipsViewController: UIViewController {
         tableView.allowsSelection = false
         spinner.startAnimating()
         
-        rocketsSubscriber = viewModel.$ships
+        shipsSubscriber = viewModel.$ships
             .receive(on: DispatchQueue.main)
             .sink { [weak self] ships in
                 self?.tableView.reloadData()

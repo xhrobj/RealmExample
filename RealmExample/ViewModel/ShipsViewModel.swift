@@ -22,10 +22,13 @@ final class ShipsViewModel {
         let networkManager = NetworkManager()
         networkManager
             .fetchShips(from: EndpointSpaceX.shipsV4)
-            .sink {[weak self] shipsJson in
+            .sink(receiveCompletion: { completion in
+                guard case .failure(let error) = completion else { return }
+                debugPrint(error)
+            }, receiveValue: { [weak self] shipsJson in
                 self?.process(shipsJson: shipsJson)
-        }
-        .store(in: &cancelSet)
+            })
+            .store(in: &cancelSet)
     }
     
     private func activateRealmObserver() {
